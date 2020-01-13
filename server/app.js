@@ -10,7 +10,7 @@ const cors = require('cors')
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://developer:teYzcHcGEUEAfUD4@development-p49x5.mongodb.net/emoji?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://developer:8uWRNShEqjjhfIdE@development-p49x5.mongodb.net/emoji?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -30,7 +30,7 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 const verifyAccessToken = require('./routes/middleware/verifyAccessTokenMiddleware')
-app.use('/', verifyAccessToken, indexRouter);
 app.use('/users', usersRouter);
+app.use('/', verifyAccessToken, indexRouter);
 
 module.exports = app;

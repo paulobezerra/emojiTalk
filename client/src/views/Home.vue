@@ -54,32 +54,12 @@
 
 <script>
 import { apiPublic } from "../services/api";
+import emojis from '../utils/emojis'
 export default {
   name: "home",
   components: {},
   data: () => ({
-    emojis: [
-      "😃",
-      "😂",
-      "😍",
-      "😘",
-      "😝",
-      "😭",
-      "😊",
-      "😔",
-      "😚",
-      "😤",
-      "😨",
-      "🙈",
-      "🙉",
-      "🙊",
-      "🙏",
-      "👊",
-      "👏",
-      "👱",
-      "👸",
-      "💊"
-    ],
+    emojis: emojis,
     errorMessage: null,
     form: {
       username: null,

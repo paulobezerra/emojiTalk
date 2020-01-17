@@ -72,7 +72,7 @@ export default {
         localStorage.setItem('token', response.data.token)
         localStorage.setItem('username', response.data.username)
         localStorage.setItem('emoji', response.data.emoji)
-        this.$router.push("/chat");
+        this.$router.push("/users");
       } catch (error) {
         console.error(error);
         this.errorMessage =

@@ -11,11 +11,14 @@
 </template>
 
 <script>
+import socket from "./socket";
 export default {
   methods: {
     logout() {
       localStorage.clear()
-      this.$router.push('/')
+      if (socket.socket) 
+        socket.socket.close()
+      this.$router.push('/login')
     },
     authenticated() {
       return !!localStorage.token

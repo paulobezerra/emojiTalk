@@ -7,10 +7,10 @@ Execute nos diretórios client e server o comando a seguir:
 
 # Executando
 * Entre em /client e execute o comando a seguir:
-** `yarn serve`
+  * `yarn serve`
 
 * Entre em /server e execute o comando a seguir:
-** `yarn start`
+  * `yarn start`
 
 # Banco de dados
 É necessário um banco de dados MongoDB para rodar a aplicação. Para setar a configuração, crie um arquivo .env na raiz do projeto e sete a seguinte variavel:

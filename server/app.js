@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config()
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -10,7 +11,7 @@ const cors = require('cors')
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://developer:KerLxNcefUNUjyO0@development-p49x5.mongodb.net/emoji?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {

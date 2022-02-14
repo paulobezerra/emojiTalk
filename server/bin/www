@@ -26,8 +26,12 @@ var server = http.createServer(app);
 /**
  * Up socket.io
  */
-const io = socket(server)
-io.origins("*:*")
+const io = socket(server, {
+  cors: {
+    origin: "*"
+  }
+})
+// io.origins("*:*")
 io.on('connection', mySocket)
 
 
